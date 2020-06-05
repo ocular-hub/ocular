@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: okular-us
+  namespace: default
+spec:
+  secretName: okular-us-tls
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-prod
+  commonName: okular.us
+  dnsNames:
+    - okular.us
+    - www.okular.us
