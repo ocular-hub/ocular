@@ -15,6 +15,11 @@ helm install ocular-nginx-ingress stable/nginx-ingress --set rbac.create=true
 tracil cli logn and creating encrypted service-acount.json.enc from gcloud 
 https://docs.travis-ci.com/user/encrypting-files/
 
+make sure to add --com to bith this commands from cli:
+travis login --com
+travis encrypt-file service-account.json -r ocular-hub/ocular --com
+rm service-account.json 
+
 ================
 didars-air:~ didar.alam$ travis login --com
 
